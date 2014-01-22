@@ -171,25 +171,65 @@ function initialize() {
 
   map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
 
-  infoWindow = new google.maps.InfoWindow({
-      content: document.getElementById('info-content')
+
+  // Try HTML5 geolocation
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = new google.maps.LatLng(position.coords.latitude,
+                                       position.coords.longitude);
+
+      var userlocationinfowindow = new google.maps.InfoWindow({
+        map: map,
+        position: pos,
+        content: 'Location found using HTML5.'
       });
 
-  // Create the autocomplete object and associate it with the UI input control.
-  // Restrict the search to the default country, and to place type "cities".
-  autocomplete = new google.maps.places.Autocomplete(
-      /** @type {HTMLInputElement} */(document.getElementById('autocomplete')),
-      {
-        types: ['(cities)'],
-        componentRestrictions: countryRestrict
-      });
-  places = new google.maps.places.PlacesService(map);
+      map.setCenter(pos);
+    }, function() {
+      handleNoGeolocation(true);
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleNoGeolocation(false);
+  }
+}
 
-  google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+function handleNoGeolocation(errorFlag) {
+  if (errorFlag) {
+    var content = 'Error: The Geolocation service failed.';
+  } else {
+    var content = 'Error: Your browser doesn\'t support geolocation.';
+  }
 
-  // Add a DOM event listener to react when the user selects a country.
-  google.maps.event.addDomListener(document.getElementById('country'), 'change',
-      setAutocompleteCountry);
+  /**var options = {
+    map: map,
+    position: new google.maps.LatLng(60, 105),
+    content: content
+  };
+
+  var infowindow = new google.maps.InfoWindow(options);
+  map.setCenter(options.position);**/
+}
+
+infoWindow = new google.maps.InfoWindow({
+  content: document.getElementById('info-content')
+});
+
+// Create the autocomplete object and associate it with the UI input control.
+// Restrict the search to the default country, and to place type "cities".
+autocomplete = new google.maps.places.Autocomplete(
+    /** @type {HTMLInputElement} */(document.getElementById('autocomplete')),
+    {
+      types: ['(cities)'],
+      componentRestrictions: countryRestrict
+    });
+places = new google.maps.places.PlacesService(map);
+
+google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+
+// Add a DOM event listener to react when the user selects a country.
+google.maps.event.addDomListener(document.getElementById('country'), 'change',
+    setAutocompleteCountry);
 }
 
 // When the user selects a city, get the place details for the city and

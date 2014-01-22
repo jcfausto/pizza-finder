@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Place Autocomplete Hotel Search</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <title>Find the nearest pizza to you!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
       html, body, #map-canvas {
@@ -210,7 +210,8 @@ function onPlaceChanged() {
 function search() {
   var search = {
     bounds: map.getBounds(),
-    types: ['lodging']
+    keyword: ['pizza'],
+    types: ['restaurant']
   };
 
   places.nearbySearch(search, function(results, status) {

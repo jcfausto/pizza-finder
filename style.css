@@ -90,6 +90,8 @@ table {
 #resultsTable {
   border-collapse: collapse;
   width: 240px;
+  height: 90%;
+  float: top;
 }
 
 #rating {
@@ -112,5 +114,7 @@ table {
 
 #more {
   width: 100%;
+  height: 10%;
   margin: 5px 0 0 0;
+  float: bottom;
 }

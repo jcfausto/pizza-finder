@@ -16,13 +16,19 @@ table {
 
 #listing {
   width: 16%;
-  height: 100%;
+  height: 92%;
   overflow: auto;
   left: 442px;
   top: 0px;
   cursor: pointer;
   overflow-x: hidden;
   float: right;
+}
+
+#more-results {
+  width: 16%;
+  height: 8%;
+  margin: 5px 0 0 0;
 }
 
 #findhotels {
@@ -90,7 +96,7 @@ table {
 #resultsTable {
   border-collapse: collapse;
   width: 240px;
-  height: 90%;
+  height: 100%;
   float: top;
 }
 
@@ -110,11 +116,4 @@ table {
 
 .iw_table_icon {
   text-align: right;
-}
-
-#more {
-  width: 100%;
-  height: 10%;
-  margin: 5px 0 0 0;
-  float: bottom;
 }

@@ -114,7 +114,7 @@ function initialize() {
       });
 
       map.setCenter(pos);
-      map.setZoom(15);
+      map.setZoom(6);
       search();
     }, function() {
       handleNoGeolocation(true);

@@ -17,12 +17,8 @@ table {
 #listing {
   width: 16%;
   height: 92%;
-  overflow: auto;
-  left: 442px;
-  top: 0px;
   cursor: pointer;
   overflow-x: hidden;
-  float: right;
 }
 
 #more-results {

@@ -97,7 +97,7 @@
 // country. It then displays markers for all the hotels returned,
 // with on-click details for each hotel.
 
-var map, places, infoWindow;
+var map, places, infoWindow, userlocationinfowindow;
 var markers = [];
 var autocomplete;
 var countryRestrict = { 'country': 'us' };
@@ -173,6 +173,7 @@ function initialize() {
 
 
   // Try HTML5 geolocation
+  //https://developers.google.com/maps/documentation/javascript/examples/map-geolocation?csw=1
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = new google.maps.LatLng(position.coords.latitude,

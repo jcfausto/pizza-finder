@@ -10,8 +10,6 @@ var countryRestrict = { 'country': 'br' };
 var MARKER_PATH = 'https://maps.gstatic.com/intl/en_us/mapfiles/marker_green';
 var hostnameRegexp = new RegExp('^https?://.+?/');
 
-var moreButton = document.getElementById('more');
-
 var countries = {
   'au': {
     center: new google.maps.LatLng(-25.3, 133.8),
@@ -68,6 +66,8 @@ var countries = {
 };
 
 function initialize() {
+  var moreButton = document.getElementById('more');
+  
   moreButton.disabled = true;
   
   var myOptions = {
@@ -190,6 +190,8 @@ function search() {
       }
 
       if (pagination.hasNextPage) {
+
+        var moreButton = document.getElementById('more');
 
         moreButton.disabled = false;
 

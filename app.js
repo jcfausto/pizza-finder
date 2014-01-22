@@ -111,6 +111,7 @@ function initialize() {
 
       map.setCenter(pos);
       map.setZoom(15);
+      search();
     }, function() {
       handleNoGeolocation(true);
     });
@@ -155,7 +156,7 @@ function onPlaceChanged() {
 function search() {
   var search = {
     bounds: map.getBounds(),
-    keyword: ['pizzaria'],
+    keyword: 'pizzaria',
     types: ['restaurants']
   };
 

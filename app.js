@@ -10,6 +10,8 @@ var countryRestrict = { 'country': 'br' };
 var MARKER_PATH = 'https://maps.gstatic.com/intl/en_us/mapfiles/marker_green';
 var hostnameRegexp = new RegExp('^https?://.+?/');
 
+var moreButton = document.getElementById('more');
+
 var countries = {
   'au': {
     center: new google.maps.LatLng(-25.3, 133.8),
@@ -66,6 +68,8 @@ var countries = {
 };
 
 function initialize() {
+  moreButton.disabled = true;
+  
   var myOptions = {
     zoom: countries['br'].zoom,
     center: countries['br'].center,
@@ -183,18 +187,17 @@ function search() {
         google.maps.event.addListener(markers[i], 'click', showInfoWindow);
         setTimeout(dropMarker(i), i * 100);
         addResult(results[i], i);
+      }
 
-        if (pagination.hasNextPage) {
-          var moreButton = document.getElementById('more');
+      if (pagination.hasNextPage) {
 
-          moreButton.disabled = false;
+        moreButton.disabled = false;
 
-          google.maps.event.addDomListenerOnce(moreButton, 'click',
-              function() {
-                moreButton.disabled = true;
-                pagination.nextPage();
-              });
-        }
+        google.maps.event.addDomListenerOnce(moreButton, 'click',
+          function() {
+            moreButton.disabled = true;
+            pagination.nextPage();
+        });
       }
     }
   });

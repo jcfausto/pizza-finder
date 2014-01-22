@@ -181,7 +181,7 @@
         autocomplete = new google.maps.places.Autocomplete(
             /** @type {HTMLInputElement} */(document.getElementById('autocomplete')),
             {
-              types: ['locality'],
+              types: ['(cities)', '(regions)'],
               componentRestrictions: countryRestrict
             });
         places = new google.maps.places.PlacesService(map);
@@ -201,7 +201,7 @@
             var infowindow = new google.maps.InfoWindow({
               map: map,
               position: pos,
-              content: 'Location found using HTML5.'
+              content: 'I guess you are here!'
             });
 
             map.setCenter(pos);

@@ -43,7 +43,7 @@ table {
 
 #locationField {
   position: absolute;
-  width: 190px;
+  width: 30%;
   height: 25px;
   left: 108px;
   top: 0px;
@@ -63,7 +63,7 @@ table {
 #autocomplete {
   background-color: #fff;
   padding: 0 11px 0 13px;
-  width: 400px;
+  width: 100%;
   font-family: Roboto;
   font-size: 15px;
   font-weight: 300;

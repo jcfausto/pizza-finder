@@ -160,8 +160,10 @@ function search() {
     types: ['restaurant']
   };
 
-  places.nearbySearch(search, function(results, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
+  places.nearbySearch(search, function(results, status, pagination) {
+    if (status != google.maps.places.PlacesServiceStatus.OK) {
+      return;
+    } else {
       clearResults();
       clearMarkers();
       // Create a marker for each hotel found, and
@@ -181,6 +183,18 @@ function search() {
         google.maps.event.addListener(markers[i], 'click', showInfoWindow);
         setTimeout(dropMarker(i), i * 100);
         addResult(results[i], i);
+
+        if (pagination.hasNextPage) {
+          var moreButton = document.getElementById('more');
+
+          moreButton.disabled = false;
+
+          google.maps.event.addDomListenerOnce(moreButton, 'click',
+              function() {
+                moreButton.disabled = true;
+                pagination.nextPage();
+              });
+        }
       }
     }
   });

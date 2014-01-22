@@ -109,3 +109,8 @@ table {
 .iw_table_icon {
   text-align: right;
 }
+
+#more {
+  width: 100%;
+  margin: 5px 0 0 0;
+}

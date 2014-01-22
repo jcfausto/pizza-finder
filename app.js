@@ -155,7 +155,8 @@ function onPlaceChanged() {
 function search() {
   var search = {
     bounds: map.getBounds(),
-    types: ['lodging']
+    keywords: ['pizza', 'pizzaria'],
+    types: ['restaurants']
   };
 
   places.nearbySearch(search, function(results, status) {

@@ -10,18 +10,19 @@ table {
 }
 
 #map-canvas {
-  width: 100%;
+  width: 84%;
+  float: left;
 }
 
 #listing {
-  position: absolute;
-  width: 200px;
-  height: 470px;
+  width: 16%;
+  height: 100%;
   overflow: auto;
   left: 442px;
   top: 0px;
   cursor: pointer;
   overflow-x: hidden;
+  float: right;
 }
 
 #findhotels {

@@ -157,7 +157,7 @@ function search() {
   var search = {
     bounds: map.getBounds(),
     keyword: 'pizzaria',
-    types: ['restaurants']
+    types: ['restaurant']
   };
 
   places.nearbySearch(search, function(results, status) {

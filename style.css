@@ -24,6 +24,15 @@ table {
   overflow-x: hidden;
 }
 
+.listing_left {
+  position: absolute;
+  background: white;
+  z-index: 99;
+  height: 100%;
+  color: #3294DB;
+  border-right: 1px solid #3294DB;
+}
+
 #findhotels {
   position: absolute;
   text-align: right;

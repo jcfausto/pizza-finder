@@ -155,7 +155,7 @@ function onPlaceChanged() {
 function search() {
   var search = {
     bounds: map.getBounds(),
-    keywords: ['pizza', 'pizzaria'],
+    keyword: ['pizzaria'],
     types: ['restaurants']
   };
 

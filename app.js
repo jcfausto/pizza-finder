@@ -118,12 +118,16 @@ function initialize() {
       map.setZoom(15);
 
       // To add the marker to the map, use the 'map' property
+      var userImage = 'base_map.png';
+
       userMarker = new google.maps.Marker({
           position: pos,
           map: map,
-          title:"Você está aqui!"
+          icon: userImage,
+          title:"Você está aqui!",
+          animation: google.maps.Animation.DROP
       });
-      
+
       search();
     }, function() {
       handleNoGeolocation(true);

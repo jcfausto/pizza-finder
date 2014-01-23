@@ -91,7 +91,7 @@ table {
 
 #resultsTable {
   border-collapse: collapse;
-  width: 240px;
+  width: 100%;
   height: 100%;
   float: top;
 }

@@ -161,7 +161,6 @@ function search() {
   var search = {
     bounds: map.getBounds(),
     keyword: 'pizza',
-    name: 'pizzaria',
     radius: '8000',
     types: ['restaurant']
   };

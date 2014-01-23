@@ -110,11 +110,11 @@ function initialize() {
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
-        content: 'I guess you are here!'
+        content: 'Você está aqui!'
       });
 
       map.setCenter(pos);
-      map.setZoom(13);
+      map.setZoom(15);
       search();
     }, function() {
       handleNoGeolocation(true);
@@ -161,6 +161,7 @@ function search() {
   var search = {
     bounds: map.getBounds(),
     keyword: 'pizzaria',
+    radius: 8000,
     types: ['restaurant']
   };
 

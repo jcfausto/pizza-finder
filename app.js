@@ -118,11 +118,7 @@ function initialize() {
       map.setZoom(15);
 
       // To add the marker to the map, use the 'map' property
-      var userImage = {
-        url: 'base_map.png',
-        // This marker is 20 pixels wide by 32 pixels tall.
-        size: new google.maps.Size(20, 32)
-      };
+      var userImage = 'user_icon.png';
 
       userMarker = new google.maps.Marker({
           position: pos,
@@ -192,7 +188,8 @@ function search() {
       // assign a letter of the alphabetic to each marker icon.
       for (var i = 0; i < results.length; i++) {
         var markerLetter = String.fromCharCode('A'.charCodeAt(0) + i);
-        var markerIcon = MARKER_PATH + markerLetter + '.png';
+        //var markerIcon = MARKER_PATH + markerLetter + '.png';
+        var markerIcon = 'pizza_icon.png';
         // Use marker animation to drop the icons incrementally on the map.
         markers[i] = new google.maps.Marker({
           position: results[i].geometry.location,

@@ -98,8 +98,8 @@ function initialize() {
   google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
 
   // Add a DOM event listener to react when the user selects a country.
-  google.maps.event.addDomListener(document.getElementById('country'), 'change',
-      setAutocompleteCountry);
+  //google.maps.event.addDomListener(document.getElementById('country'), 'change',
+  //    setAutocompleteCountry);
 
   // Try HTML5 geolocation
   if(navigator.geolocation) {
@@ -219,7 +219,7 @@ function clearMarkers() {
 // [START region_setcountry]
 // Set the country restriction based on user input.
 // Also center and zoom the map on the given country.
-function setAutocompleteCountry() {
+/*function setAutocompleteCountry() {
   var country = document.getElementById('country').value;
   if (country == 'all') {
     autocomplete.setComponentRestrictions([]);
@@ -233,7 +233,7 @@ function setAutocompleteCountry() {
   clearResults();
   clearMarkers();
 }
-// [END region_setcountry]
+// [END region_setcountry]*/
 
 function dropMarker(i) {
   return function() {

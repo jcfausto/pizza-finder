@@ -121,11 +121,7 @@ function initialize() {
       var userImage = {
         url: 'base_map.png',
         // This marker is 20 pixels wide by 32 pixels tall.
-        size: new google.maps.Size(20, 32),
-        // The origin for this image is 0,0.
-        origin: new google.maps.Point(0,0),
-        // The anchor for this image is the base of the flagpole at 0,32.
-        anchor: new google.maps.Point(0, 32)
+        size: new google.maps.Size(20, 32)
       };
 
       userMarker = new google.maps.Marker({

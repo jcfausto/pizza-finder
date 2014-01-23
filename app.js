@@ -9,6 +9,7 @@ var autocomplete;
 var countryRestrict = { 'country': 'br' };
 var MARKER_PATH = 'https://maps.gstatic.com/intl/en_us/mapfiles/marker_green';
 var hostnameRegexp = new RegExp('^https?://.+?/');
+var userMarker;
 
 var countries = {
   'au': {
@@ -107,14 +108,22 @@ function initialize() {
       var pos = new google.maps.LatLng(position.coords.latitude,
                                        position.coords.longitude);
 
-      var infowindow = new google.maps.InfoWindow({
-        map: map,
-        position: pos,
-        content: 'Você está aqui!'
-      });
+      //var infowindow = new google.maps.InfoWindow({
+      //  map: map,
+      //  position: pos,
+      //  content: 'Você está aqui!'
+      //});
 
       map.setCenter(pos);
       map.setZoom(15);
+
+      // To add the marker to the map, use the 'map' property
+      userMarker = new google.maps.Marker({
+          position: pos,
+          map: map,
+          title:"Você está aqui!"
+      });
+      
       search();
     }, function() {
       handleNoGeolocation(true);

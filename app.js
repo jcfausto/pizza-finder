@@ -130,7 +130,7 @@ function initialize() {
 
       //https://developers.google.com/maps/documentation/javascript/examples/event-simplev
       google.maps.event.addListener(userMarker, 'click', function() {
-        map.setZoom(8);
+        map.setZoom(15);
         map.setCenter(marker.getPosition());
       });
 

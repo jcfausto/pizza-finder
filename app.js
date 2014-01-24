@@ -234,8 +234,11 @@ function search() {
 
         google.maps.event.addDomListener(moreButton, 'click',
           function() {
+            console.group("Botoes");
             moreButton.disabled = true;
             pagination.nextPage();
+            console.log("More results pressionado.");
+            console.groupEnd();
         });
       }
     }

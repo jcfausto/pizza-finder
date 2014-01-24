@@ -128,6 +128,12 @@ function initialize() {
           animation: google.maps.Animation.DROP
       });
 
+      //https://developers.google.com/maps/documentation/javascript/examples/event-simplev
+      google.maps.event.addListener(userMarker, 'click', function() {
+        map.setZoom(8);
+        map.setCenter(marker.getPosition());
+      });
+
       search();
     }, function() {
       handleNoGeolocation(true);
@@ -155,6 +161,7 @@ function initialize() {
   }        
 
   //google.maps.event.addListener(map, 'center_changed', search);
+  //https://developers.google.com/maps/documentation/javascript/events
   var resetPosition = document.getElementById('resetPosition');
 
   google.maps.event.addDomListener(resetPosition, 'click',

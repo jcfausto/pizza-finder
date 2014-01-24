@@ -159,8 +159,7 @@ function initialize() {
     var infowindow = new google.maps.InfoWindow(options);
     map.setCenter(options.position);
   }        
-
-  //google.maps.event.addListener(map, 'center_changed', search);
+  
   //https://developers.google.com/maps/documentation/javascript/events
   var resetPosition = document.getElementById('resetPosition');
 
@@ -168,6 +167,8 @@ function initialize() {
     function() {
       map.panTo(userMarker.getPosition());
   });
+
+  google.maps.event.addListener(map, 'center_changed', search());
 
 } //END-INITIALIZE
 

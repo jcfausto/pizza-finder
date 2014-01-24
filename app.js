@@ -168,7 +168,10 @@ function initialize() {
       map.panTo(userMarker.getPosition());
   });
 
-  google.maps.event.addListener(map, 'center_changed', function(){
+  google.maps.event.addListener(map, 'dragend', function(){
+    console.group("Eventos");
+    console.log("dragend");
+    console.groupEnd();
     search();
   });
 

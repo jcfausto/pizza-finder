@@ -196,8 +196,8 @@ function search() {
   var search = {
     bounds: map.getBounds(),
     keyword: 'pizza',
-    radius: '10000',
-    types: ['restaurant|meal_delivery']
+    radius: '8000',
+    types: ['restaurant']
   };
 
   places.nearbySearch(search, function(results, status, pagination) {

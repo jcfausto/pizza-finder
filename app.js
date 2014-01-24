@@ -168,7 +168,9 @@ function initialize() {
       map.panTo(userMarker.getPosition());
   });
 
-  google.maps.event.addListener(map, 'center_changed', search);
+  google.maps.event.addListener(map, 'center_changed', function(){
+    search();
+  });
 
 } //END-INITIALIZE
 

@@ -232,7 +232,7 @@ function search() {
 
         moreButton.disabled = false;
 
-        google.maps.event.addDomListenerOnce(moreButton, 'click',
+        google.maps.event.addDomListener(moreButton, 'click',
           function() {
             moreButton.disabled = true;
             pagination.nextPage();

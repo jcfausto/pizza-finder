@@ -135,7 +135,7 @@ function initialize() {
   } else {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
-  }        
+  }
 
   function handleNoGeolocation(errorFlag) {
     if (errorFlag) {
@@ -153,7 +153,16 @@ function initialize() {
     var infowindow = new google.maps.InfoWindow(options);
     map.setCenter(options.position);
   }        
-}      
+
+  //google.maps.event.addListener(map, 'center_changed', search);
+  var resetPosition = document.getElementById('resetPosition');
+
+  google.maps.event.addDomListenerOnce(resetPosition, 'click',
+    function() {
+      map.panTo(userMarker.getPosition());
+  });
+
+} //END-INITIALIZE
 
 // When the user selects a city, get the place details for the city and
 // zoom the map in on the city.

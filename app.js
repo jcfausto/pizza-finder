@@ -157,7 +157,7 @@ function initialize() {
   //google.maps.event.addListener(map, 'center_changed', search);
   var resetPosition = document.getElementById('resetPosition');
 
-  google.maps.event.addDomListenerOnce(resetPosition, 'click',
+  google.maps.event.addDomListener(resetPosition, 'click',
     function() {
       map.panTo(userMarker.getPosition());
   });

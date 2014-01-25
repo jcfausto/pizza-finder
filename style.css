@@ -24,6 +24,7 @@ table {
 
 #toggleButton
 {
+    float: left;
     cursor: pointer;
     padding: 10px;
     margin: 10px;

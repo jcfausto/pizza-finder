@@ -33,7 +33,7 @@ table {
 #resetPosition {
   width: 32px;
   height: 32px;
-  background-image: url("user-location.png") no-repeat top left;
+  background: url("user-location.png") no-repeat;
   border: none;
   padding: 2px 8px;
 }

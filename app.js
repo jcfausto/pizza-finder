@@ -207,6 +207,11 @@ function initialize() {
             $('#show_icon').text('>>');
             $('#show_icon').attr("alt", "Expandir lista de resultados.");
 
+
+            $('#locationField').animate({
+                "left": "-=40px"
+            }, 500);
+
         }
         else {
             $("#slidepanel").animate({
@@ -224,6 +229,10 @@ function initialize() {
             }, 500);
             $('#show_icon').text('<<');
             $('#show_icon').attr("alt", "Encolher lista de resultados.");
+
+            $('#locationField').animate({
+                "left": "+=40px"
+            }, 500);
 
         };
     });

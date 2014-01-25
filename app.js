@@ -205,7 +205,7 @@ function initialize() {
                 "marginLeft": "-=200px"
             }, 500);
             $('#show_icon').text('>>');
-            $('#show_icon').prop("alt", "Expandir lista de resultados.");
+            $('#show_icon').attr("alt", "Expandir lista de resultados.");
 
         }
         else {
@@ -223,7 +223,7 @@ function initialize() {
                 "marginLeft": "+=200px"
             }, 500);
             $('#show_icon').text('<<');
-            $('#show_icon').prop("alt", "Encolher lista de resultados.");
+            $('#show_icon').attr("alt", "Encolher lista de resultados.");
 
         };
     });

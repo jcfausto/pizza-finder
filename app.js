@@ -241,7 +241,7 @@ function search() {
     if (status != google.maps.places.PlacesServiceStatus.OK) {
       return;
     } else {
-      clearResults();
+      //clearResults();
       clearMarkers();
       // Create a marker for each hotel found, and
       // assign a letter of the alphabetic to each marker icon.
@@ -260,9 +260,10 @@ function search() {
         markers[i].placeResult = results[i];
         google.maps.event.addListener(markers[i], 'click', showInfoWindow);
         setTimeout(dropMarker(i), i * 100);
-        addResult(results[i], i);
+        //addResult(results[i], i);
       }
 
+      /*
       if (pagination.hasNextPage) {
 
         var moreButton = document.getElementById('more');
@@ -277,7 +278,7 @@ function search() {
             console.log("More results pressionado.");
             console.groupEnd();
         });
-      }
+      } */
     }
   });
 }

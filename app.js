@@ -204,6 +204,7 @@ function initialize() {
             $('#show_icon').animate({
                 "marginLeft": "-=200px"
             }, 500);
+            $('#show_icon').text('>>');
         }
         else {
             $("#slidepanel").animate({
@@ -219,6 +220,7 @@ function initialize() {
             $('#show_icon').animate({
                 "marginLeft": "+=200px"
             }, 500);
+            $('#show_icon').text('<<');
 
         };
     });

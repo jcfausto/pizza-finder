@@ -30,6 +30,14 @@ table {
     margin: 10px;
 }
 
+#resetPosition {
+  width: 32px;
+  height: 32px;
+  background-image: url("user-location.png") no-repeat top left;
+  border: none;
+  padding: 2px 8px;
+}
+
 #show_icon {
   position: absolute;
   z-index: 98;
@@ -68,7 +76,7 @@ table {
 
 #locationField {
   position: absolute;
-  width: 30%;
+  width: 35%;
   height: 25px;
   left: 210px;
   top: 0px;
@@ -88,7 +96,6 @@ table {
 #autocomplete {
   background-color: #fff;
   padding: 0 11px 0 13px;
-  width: 100%;
   font-family: Roboto;
   font-size: 15px;
   font-weight: 300;

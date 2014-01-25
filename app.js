@@ -188,25 +188,25 @@ function initialize() {
         if (slidePanelOpen) {
             // hide panel
             $("#slidepanel").animate({
-                "marginLeft": "+=10px"
+                "marginLeft": "-=150px"
             }, 500);
             slidePanelOpen = false;
             toggleButton.attr('value', 'Open');
             //map.panBy(-150, 0);
             // change width of map to fill empty space left from collapse of sldide panel
             $('#map_canvas').animate({
-                "width": "-=10px"
+                "width": "+=150px"
             }, 500);
         }
         else {
             $("#slidepanel").animate({
-                "marginLeft": "+=10px"
+                "marginLeft": "+=150px"
             }, 500);
             slidePanelOpen = true;
             toggleButton.attr('value', 'Close');
             //map.panBy(150, 0);
             $('#map_canvas').animate({
-                "width": "-=10px"
+                "width": "-=150px"
             }, 500);
 
         };

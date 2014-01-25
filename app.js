@@ -182,7 +182,7 @@ function initialize() {
     search();
   });
 
-  var toggleButton = $('#toggleButton');
+  var toggleButton = $('#show_icon');
 
   toggleButton.click(function() {
         if (slidePanelOpen) {

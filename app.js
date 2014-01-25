@@ -11,6 +11,8 @@ var MARKER_PATH = 'https://maps.gstatic.com/intl/en_us/mapfiles/marker_green';
 var hostnameRegexp = new RegExp('^https?://.+?/');
 var userMarker;
 
+var slidePanelOpen; // flag set if panel is open or closed
+
 var countries = {
   'au': {
     center: new google.maps.LatLng(-25.3, 133.8),
@@ -67,6 +69,11 @@ var countries = {
 };
 
 function initialize() {
+  slidePanelOpen = true;
+
+  // set initial with of map to the size of the( window - panel width) 
+  $('#map_canvas').css('width', (window.innerWidth - 200 + 'px'));
+
   var moreButton = document.getElementById('more');
   
   moreButton.disabled = true;
@@ -174,6 +181,36 @@ function initialize() {
     console.groupEnd();
     search();
   });
+
+  var toggleButton = $('#toggleButton');
+
+  toggleButton.click(function() {
+        if (slidePanelOpen) {
+            // hide panel
+            $("#slidepanel").animate({
+                "marginLeft": "-=150px"
+            }, 500);
+            slidePanelOpen = false;
+            toggleButton.attr('value', 'Open');
+            //map.panBy(-150, 0);
+            // change width of map to fill empty space left from collapse of sldide panel
+            $('#map_canvas').animate({
+                "width": "+=150px"
+            }, 500);
+        }
+        else {
+            $("#slidepanel").animate({
+                "marginLeft": "+=150px"
+            }, 500);
+            slidePanelOpen = true;
+            toggleButton.attr('value', 'Close');
+            //map.panBy(150, 0);
+            $('#map_canvas').animate({
+                "width": "-=150px"
+            }, 500);
+
+        };
+    });
 
 } //END-INITIALIZE
 

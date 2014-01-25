@@ -14,6 +14,21 @@ table {
   float: left;
 }
 
+#slidepanel
+{
+    height: 100%;
+    width: 200px;
+    float: left;
+}
+
+#toggleButton
+{
+    float: right;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+}
+
 #listing {
   width: 16%;
   height: 92%;

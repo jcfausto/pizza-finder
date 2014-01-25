@@ -12,25 +12,6 @@
 
   <body style="margin:0px; padding:0px;" onload="initialize()">
     
-    <!-- <div id="controls">
-      <select id="country">
-        <option value="all">All</option>
-        <option value="au">Australia</option>
-        <option value="br" selected>Brazil</option>
-        <option value="ca">Canada</option>
-        <option value="fr">France</option>
-        <option value="de">Germany</option>
-        <option value="mx">Mexico</option>
-        <option value="nz">New Zealand</option>
-        <option value="it">Italy</option>
-        <option value="za">South Africa</option>
-        <option value="es">Spain</option>
-        <option value="pt">Portugal</option>
-        <option value="us">U.S.A.</option>
-        <option value="uk">United Kingdom</option>
-      </select>
-    </div> -->
-    
     <div id="locationField">
       <input id="autocomplete" placeholder="Digite a cidade desejada" type="text" />
       <button id="resetPosition">Reset map to my current position</button>
@@ -38,13 +19,16 @@
 
     <div id="map-canvas"></div>
 
-    <div id="listing">
-      <table id="resultsTable">
-        <tbody id="results"></tbody>
-      </table>
-    </div>
-    <div id="more-results">
-      <button id="more">More results</button>
+    <div id="sidepanel">
+      <input id="toggleButton" type="button" value="Close" /> 
+      <div id="listing">
+        <table id="resultsTable">
+          <tbody id="results"></tbody>
+        </table>
+      </div>
+      <div id="more-results">
+        <button id="more">More results</button>
+      </div>
     </div>
     
     <div id="info-content">

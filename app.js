@@ -188,14 +188,14 @@ function initialize() {
         if (slidePanelOpen) {
             // hide panel
             $("#slidepanel").animate({
-                "marginLeft": "-=10px"
+                "marginLeft": "+=10px"
             }, 500);
             slidePanelOpen = false;
             toggleButton.attr('value', 'Open');
             //map.panBy(-150, 0);
             // change width of map to fill empty space left from collapse of sldide panel
             $('#map_canvas').animate({
-                "width": "+=10px"
+                "width": "-=10px"
             }, 500);
         }
         else {

@@ -39,6 +39,7 @@ table {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3294DB', endColorstr='#1C69A0');
   color: white;
   padding: 10px;
+  margin-left: 200px;
 }
 
 #listing {

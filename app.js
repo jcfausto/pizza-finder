@@ -200,6 +200,10 @@ function initialize() {
             $('#map-canvas').animate({
                 "width": "+=200px"
             }, 500);
+
+            $('#show_icon').animate({
+                "marginLeft": "-=200px"
+            }, 500);
         }
         else {
             $("#slidepanel").animate({
@@ -210,6 +214,10 @@ function initialize() {
             //map.panBy(150, 0);
             $('#map-canvas').animate({
                 "width": "-=200px"
+            }, 500);
+
+            $('#show_icon').animate({
+                "marginLeft": "+=200px"
             }, 500);
 
         };

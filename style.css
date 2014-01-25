@@ -10,7 +10,8 @@ table {
 }
 
 #map-canvas {
-  width: 84%;
+  /*width: 84%;*/
+  height: 100%;
   float: left;
 }
 

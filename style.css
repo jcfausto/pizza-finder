@@ -40,6 +40,10 @@ table {
   background-color: rgba(255,255,255,1);
   border-radius: 2px;
   float: right; 
+  margin: 1px 2px auto;
+  -webkit-box-shadow: inset 20px -5px 33px 1px rgba(230,230,230,0.59);
+  -moz-box-shadow: inset 20px -5px 33px 1px rgba(230,230,230,0.59);
+  box-shadow: inset 20px -5px 33px 1px rgba(230,230,230,0.59);
 }
 
 #show_icon {

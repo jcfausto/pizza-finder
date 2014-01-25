@@ -197,9 +197,9 @@ function initialize() {
             toggleButton.attr('value', 'Open');
             //map.panBy(-150, 0);
             // change width of map to fill empty space left from collapse of sldide panel
-            $('#map_canvas').animate({
-                "width": "+=200px"
-            }, 500);
+            //$('#map_canvas').animate({
+            //    "width": "+=200px"
+            //}, 500);
         }
         else {
             $("#slidepanel").animate({
@@ -208,9 +208,9 @@ function initialize() {
             slidePanelOpen = true;
             toggleButton.attr('value', 'Close');
             //map.panBy(150, 0);
-            $('#map_canvas').animate({
-                "width": "-=200px"
-            }, 500);
+            //$('#map_canvas').animate({
+            //    "width": "-=200px"
+            //}, 500);
 
         };
     });

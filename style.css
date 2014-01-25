@@ -24,14 +24,12 @@ table {
 
 #toggleButton
 {
-    float: right;
     cursor: pointer;
     padding: 10px;
     margin: 10px;
 }
 
 #listing {
-  width: 16%;
   height: 92%;
   cursor: pointer;
   overflow-x: hidden;

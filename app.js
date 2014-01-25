@@ -72,7 +72,7 @@ function initialize() {
   slidePanelOpen = true;
 
   // set initial with of map to the size of the( window - panel width) 
-  document.getElementById('map-canvas').css('width', (window.innerWidth - 200 + 'px'));
+  $('#map-canvas').css('width', (window.innerWidth - 200 + 'px'));
 
   var moreButton = document.getElementById('more');
   
@@ -413,3 +413,8 @@ function buildIWContent(place) {
     document.getElementById('iw-website-row').style.display = 'none';
   }
 }
+
+//jquery - when document ready
+$(function() {
+  initialize();
+})

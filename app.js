@@ -74,9 +74,9 @@ function initialize() {
   // set initial with of map to the size of the( window - panel width) 
   $('#map-canvas').css('width', (window.innerWidth - 200 + 'px'));
 
-  //var moreButton = document.getElementById('more');
+  var moreButton = document.getElementById('more');
   
-  //moreButton.disabled = true;
+  moreButton.disabled = true;
   
   var myOptions = {
     zoom: countries['br'].zoom,
@@ -241,7 +241,7 @@ function search() {
     if (status != google.maps.places.PlacesServiceStatus.OK) {
       return;
     } else {
-      //clearResults();
+      clearResults();
       clearMarkers();
       // Create a marker for each hotel found, and
       // assign a letter of the alphabetic to each marker icon.
@@ -260,10 +260,10 @@ function search() {
         markers[i].placeResult = results[i];
         google.maps.event.addListener(markers[i], 'click', showInfoWindow);
         setTimeout(dropMarker(i), i * 100);
-        //addResult(results[i], i);
+        addResult(results[i], i);
       }
 
-      /*
+      
       if (pagination.hasNextPage) {
 
         var moreButton = document.getElementById('more');
@@ -278,7 +278,7 @@ function search() {
             console.log("More results pressionado.");
             console.groupEnd();
         });
-      } */
+      } 
     }
   });
 }

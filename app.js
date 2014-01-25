@@ -74,9 +74,9 @@ function initialize() {
   // set initial with of map to the size of the( window - panel width) 
   $('#map-canvas').css('width', (window.innerWidth - 200 + 'px'));
 
-  var moreButton = document.getElementById('more');
+  //var moreButton = document.getElementById('more');
   
-  moreButton.disabled = true;
+  //moreButton.disabled = true;
   
   var myOptions = {
     zoom: countries['br'].zoom,

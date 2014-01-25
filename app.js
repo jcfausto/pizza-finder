@@ -74,7 +74,7 @@ function initialize() {
   // set initial with of map to the size of the( window - panel width) 
   $('#map-canvas').css('width', (window.innerWidth - 200 + 'px'));
 
-  $('#info-content').css('display', 'none'));
+  $('#info-content').css('display', 'none');
 
 
   var moreButton = document.getElementById('more');
@@ -417,7 +417,7 @@ function buildIWContent(place) {
     document.getElementById('iw-website-row').style.display = 'none';
   }
 
-  $('#info-content').css('display', ''));
+  $('#info-content').css('display', '');
 }
 
 //jquery - when document ready

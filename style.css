@@ -117,12 +117,8 @@ table {
   margin-top: 5px;
 }
 
-
 #autocomplete:focus {
   border-color: #4d90fe;
-  margin-left: -1px;
-  padding-left: 14px;  /* Regular padding-left + 1. */
-  width: 401px;
 }
 
 #country {

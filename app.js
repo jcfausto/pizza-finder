@@ -72,7 +72,7 @@ function initialize() {
   slidePanelOpen = true;
 
   // set initial with of map to the size of the( window - panel width) 
-  $('#map_canvas').css('width', (window.innerWidth - 200 + 'px'));
+  document.getElementById('map-canvas').css('width', (window.innerWidth - 200 + 'px'));
 
   var moreButton = document.getElementById('more');
   

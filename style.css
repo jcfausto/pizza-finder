@@ -5,6 +5,11 @@ html, body, #map-canvas {
   padding: 0px
 }
 
+body {
+  /* bootstrap nav-bar requirement */
+  padding-top: 70px;
+}
+
 table {
   font-size: 12px;
 }

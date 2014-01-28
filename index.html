@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>V0.45</title>
+    <title>V0.46</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <link href="style.css" media="all" rel="stylesheet" type="text/css" />
@@ -15,51 +15,58 @@
     <script src="app.js" type="text/javascript"></script>
   </head>
 
-  <body style="margin:0px; padding:0px;">
-    
-    <div id="locationField">
-      <input id="autocomplete" placeholder="Digite a cidade desejada" type="text" />
-      <button id="resetPosition"></button>
-    </div>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">EncontraPizza</a>
+      </div>
+    </nav>
 
-    <a id="show_icon" href="#" alt="Encolher lista de resultados"><<</a>
-    <div id="slidepanel">
-      <div id="listing">
-        <table id="resultsTable">
-          <tbody id="results"></tbody>
+    <div class="container">
+      <div id="locationField">
+        <input id="autocomplete" placeholder="Digite a cidade desejada" type="text" />
+        <button id="resetPosition"></button>
+      </div>
+
+      <a id="show_icon" href="#" alt="Encolher lista de resultados"><<</a>
+      <div id="slidepanel">
+        <div id="listing">
+          <table id="resultsTable">
+            <tbody id="results"></tbody>
+          </table>
+        </div>
+        <div id="more-results">
+          <button id="more" class="btn-green">Mais resultados</button>
+        </div>
+      </div>
+
+      <div id="map-canvas"></div>
+
+      <div id="info-content">
+        <table>
+          <tr id="iw-url-row" class="iw_table_row">
+            <td id="iw-icon" class="iw_table_icon"></td>
+            <td id="iw-url"></td>
+          </tr>
+          <tr id="iw-address-row" class="iw_table_row">
+            <td class="iw_attribute_name">Address:</td>
+            <td id="iw-address"></td>
+          </tr>
+          <tr id="iw-phone-row" class="iw_table_row">
+            <td class="iw_attribute_name">Telephone:</td>
+            <td id="iw-phone"></td>
+          </tr>
+          <tr id="iw-rating-row" class="iw_table_row">
+            <td class="iw_attribute_name">Rating:</td>
+            <td id="iw-rating"></td>
+          </tr>
+          <tr id="iw-website-row" class="iw_table_row">
+            <td class="iw_attribute_name">Website:</td>
+            <td id="iw-website"></td>
+          </tr>
         </table>
       </div>
-      <div id="more-results">
-        <button id="more" class="btn-green">Mais resultados</button>
-      </div>
-    </div>
-
-    <div id="map-canvas"></div>
-
-    <div id="info-content">
-      <table>
-        <tr id="iw-url-row" class="iw_table_row">
-          <td id="iw-icon" class="iw_table_icon"></td>
-          <td id="iw-url"></td>
-        </tr>
-        <tr id="iw-address-row" class="iw_table_row">
-          <td class="iw_attribute_name">Address:</td>
-          <td id="iw-address"></td>
-        </tr>
-        <tr id="iw-phone-row" class="iw_table_row">
-          <td class="iw_attribute_name">Telephone:</td>
-          <td id="iw-phone"></td>
-        </tr>
-        <tr id="iw-rating-row" class="iw_table_row">
-          <td class="iw_attribute_name">Rating:</td>
-          <td id="iw-rating"></td>
-        </tr>
-        <tr id="iw-website-row" class="iw_table_row">
-          <td class="iw_attribute_name">Website:</td>
-          <td id="iw-website"></td>
-        </tr>
-      </table>
-    </div>
+    </div> <!-- div container end -->
   </body>
 </html>
 

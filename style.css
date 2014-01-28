@@ -14,11 +14,9 @@ table {
   font-size: 12px;
 }
 
-/* overriding bootstrap .container definition to be a full container relative to viewport */
-.container {
+.full-container {
   width: 100%;
   height: 100%;
-  margin: 0px;
 }
 
 #map-canvas {
